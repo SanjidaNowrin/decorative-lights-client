@@ -57,28 +57,26 @@ const Header = () => {
                   </Nav.Link>
                 </>
               ) : (
-                <Nav>
-                  <div className="text-center">
-                    <h6>{displayName}</h6>
-                    <p className="m-0 mb-2">{email}</p>
-                    <button
-                      onClick={logOut}
-                      style={{ backgroundColor: "#237DB2" }}
-                      className="border-0 btn btn-primary fw-bolder"
-                    >
-                      Log Out
-                    </button>
-                  </div>
-                  <hr />
+                <div className="d-md-flex align-items-center">
                   <Nav.Link
                     as={NavLink}
                     className="p-4 text-center text-white fw-bolder"
                     to="/dashboard"
-                    style={{ backgroundColor: "#237DB2" }}
                   >
-                    Dashboard
+                    DASHBOARD
                   </Nav.Link>
-                </Nav>
+
+                  <h6 className="text-light fw-bold me-2 mt-2">
+                    {displayName}
+                  </h6>
+                  <button
+                    onClick={logOut}
+                    style={{ backgroundColor: "#513C27" }}
+                    className="border-0 btn btn-primary fw-bolder"
+                  >
+                    Log Out
+                  </button>
+                </div>
               )}
             </Nav>
           </Navbar.Collapse>

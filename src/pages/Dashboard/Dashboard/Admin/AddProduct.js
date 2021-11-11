@@ -23,8 +23,8 @@ const AddProduct = () => {
   };
   return (
     <div className="mb-5">
-      <h1 className="mt-5 text-center " style={{ color: "#237DB2" }}>
-        Please Add Destinations
+      <h1 className="mt-5 text-center " style={{ color: "#895E40" }}>
+        Add New Product
       </h1>
       <div lassName="mt-0 col-md-6">
         <div className="p-3 m-auto mt-5 mb-5 rounded shadow login-box w-25 bg-body">
@@ -44,6 +44,12 @@ const AddProduct = () => {
                   className="p-3 m-2 w-100"
                 />
                 <br />
+                <input
+                  {...register("price")}
+                  placeholder="Price"
+                  className="p-3 m-2 w-100"
+                />
+                <br />
 
                 <input
                   {...register("img", { required: true })}
@@ -58,7 +64,7 @@ const AddProduct = () => {
                   type="submit"
                   value="Add"
                   className="mt-3 mb-3 btn w-50"
-                  style={{ backgroundColor: "#237DB2", color: "white" }}
+                  style={{ backgroundColor: "#895E40", color: "white" }}
                 />
               </form>
             </div>

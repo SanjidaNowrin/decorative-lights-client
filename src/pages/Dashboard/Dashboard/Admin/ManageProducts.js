@@ -31,7 +31,7 @@ const ManageProducts = () => {
   };
   return (
     <div className="container">
-      <h1 className="mt-4 mb-5 text-center" style={{ color: "#237DB2" }}>
+      <h1 className="mt-4 mb-5 text-center" style={{ color: "#895E40" }}>
         All Booking {event?.length}
       </h1>
       <Table
@@ -59,7 +59,7 @@ const ManageProducts = () => {
               <button
                 onClick={() => handleDelete(pd._id)}
                 className="p-2 mt-2 text-white ms-2 btn me-2"
-                style={{ backgroundColor: "#237DB2" }}
+                style={{ backgroundColor: "#895E40" }}
               >
                 Delete
               </button>

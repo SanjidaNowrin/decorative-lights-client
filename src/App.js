@@ -20,7 +20,6 @@ function App() {
     <div>
       <AuthProvider>
         <Router>
-          <Header></Header>
           <Switch>
             <Route exact path="/">
               <Home></Home>
@@ -40,15 +39,14 @@ function App() {
             <Route path="/signup">
               <Signup></Signup>
             </Route>
-            <Route path="/Dashboard">
+            <PrivateRoute path="/Dashboard">
               <Dashbaord></Dashbaord>
-            </Route>
+            </PrivateRoute>
 
             <Route path="*">
               <NotFound></NotFound>
             </Route>
           </Switch>
-          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>

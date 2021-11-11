@@ -19,10 +19,10 @@ const ManageAllOrders = () => {
   }, [control, email, reload]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allProducts")
+    fetch("http://localhost:5000/allOrders")
       .then((res) => res.json())
       .then((data) => setEvent(data));
-  }, [control]);
+  }, [control, reload]);
 
   const handleDelete = (id) => {
     const confirmation = window.confirm("are you sure to delete");
@@ -42,7 +42,7 @@ const ManageAllOrders = () => {
   function confirmHandler(id) {
     const confirmation = window.confirm("are you sure to confirm!!");
     if (confirmation) {
-      fetch(`http://localhost:5000/confirmation/${id}`, {
+      fetch(`http://localhost:5000/allOrders/${id}`, {
         method: "put",
       })
         .then((res) => res.json())
@@ -55,8 +55,8 @@ const ManageAllOrders = () => {
   }
   return (
     <div className="container">
-      <h1 className="mt-4 mb-5 text-center" style={{ color: "#237DB2" }}>
-        All Booking
+      <h1 className="mt-4 mb-5 text-center" style={{ color: "#895E40" }}>
+        All Placed Orders
       </h1>
       <Table
         striped
@@ -75,7 +75,7 @@ const ManageAllOrders = () => {
             <th>Action</th>
           </tr>
         </thead>
-        {carts?.map((pd, index) => (
+        {event?.map((pd, index) => (
           <tbody>
             <tr>
               <td>{index}</td>
@@ -87,14 +87,14 @@ const ManageAllOrders = () => {
               <button
                 onClick={() => handleDelete(pd._id)}
                 className="p-2 mt-2 text-white ms-2 btn me-2"
-                style={{ backgroundColor: "#237DB2" }}
+                style={{ backgroundColor: "#895E40" }}
               >
                 Delete
               </button>
               <button
                 onClick={() => confirmHandler(pd._id)}
                 className="p-2 mt-2 mb-2 text-white ms-2 btn me-2"
-                style={{ backgroundColor: "red" }}
+                style={{ backgroundColor: "#895E40" }}
               >
                 Pending
               </button>
