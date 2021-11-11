@@ -3,6 +3,8 @@ import { Col, Container, Row } from "react-bootstrap";
 import useAuth from "./../../../../hooks/useAuth";
 
 const Cart = () => {
+  const [control, setControl] = useState(false);
+  const [reload, setReload] = useState(true);
   const { allContext, remove } = useAuth();
   const [carts, setCarts] = useState([]);
   const { user } = allContext;
@@ -13,8 +15,26 @@ const Cart = () => {
     fetch(query)
       .then((res) => res.json())
       .then((data) => setCarts(data));
-  }, [email]);
+  }, [email, reload]);
   console.log(carts);
+  //delete
+  const handleDelete = (id) => {
+    const confirmation = window.confirm("are you sure to delete");
+    if (confirmation) {
+      fetch(`http://localhost:5000/delete/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.deletedCount === 1) {
+            setControl(!control);
+            setReload(!reload);
+          }
+        });
+    }
+    console.log(id);
+  };
   return (
     <div className="my-4">
       <Container>
@@ -41,6 +61,13 @@ const Cart = () => {
                   <h5 className="m-0">Address: {cart.address}</h5>
                   <h5 className="m-0">Booking Id: {cart.booking_id}</h5>
                   <h5 className="m-0">Status: {cart.status}</h5>
+                  <button
+                    onClick={() => handleDelete(cart._id)}
+                    className="p-2 mt-2 text-white ms-2 btn me-2"
+                    style={{ backgroundColor: "#895E40" }}
+                  >
+                    Delete
+                  </button>
                 </Col>
               </Row>
             ))}

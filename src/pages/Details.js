@@ -30,7 +30,7 @@ const Details = () => {
     newData.desc = desc;
     newData.img = img;
 
-    console.log(newData);
+    //console.log(newData);
     fetch("http://localhost:5000/product/add", {
       method: "post",
       headers: { "content-type": "application/json" },

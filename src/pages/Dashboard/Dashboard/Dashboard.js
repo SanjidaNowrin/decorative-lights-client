@@ -28,6 +28,7 @@ import ManageAllOrders from "./Admin/ManageAllOrders";
 import AdminRoute from "./Admin/AdminRoute";
 import DashboardHome from "./DashboardHome";
 import Payment from "./Payment";
+import AddReview from "./AddReview";
 
 const drawerWidth = 200;
 
@@ -227,6 +228,9 @@ const Dashboard = (props) => {
           </Route>
           <Route exact path={`${path}/cart`}>
             <Cart></Cart>
+          </Route>
+          <Route exact path={`${path}/review`}>
+            <AddReview></AddReview>
           </Route>
           <Route exact path={`${path}/payment`}>
             <Payment></Payment>
