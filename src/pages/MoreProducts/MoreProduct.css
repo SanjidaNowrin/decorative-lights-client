@@ -1,0 +1,15 @@
+.details-btn {
+  background-color: #895e40;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  padding: 5px;
+  cursor: pointer;
+}
+.details-btn:hover {
+  background-color: black;
+}
+.cardHover:hover {
+  transform: scale(1.03);
+  transition: transform 1s;
+}
