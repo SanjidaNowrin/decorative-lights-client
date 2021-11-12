@@ -4,8 +4,6 @@ import useAuth from "../hooks/useAuth.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
-import google from "./../assets/images/google.png";
-
 import login from "./../assets/images/login.png";
 import Header from "../Shared/Header/Header.js";
 import Footer from "../Shared/Footer/Footer.js";
@@ -31,7 +29,7 @@ const Login = () => {
       <Header></Header>
       <div className="container">
         <div className="m-0 mt-3 row">
-          <div className="col-lg-6 col-sm-12 ">
+          <div className="mt-4 col-lg-6 col-sm-12 ">
             <img src={login} alt="" className="img-fluid" />
           </div>
           <div className="col-lg-6 col-sm-12">
@@ -112,27 +110,6 @@ const Login = () => {
                   Need an Account? Please Sign up!
                 </NavLink>
               </p>
-              <p className="mt-3" style={{ color: "#895E40" }}>
-                Or
-              </p>
-              <p style={{ color: "#023C76" }}> Login with</p>
-              <div>
-                <button
-                  onClick={() => {
-                    signInWithGoogle()
-                      .then((result) => {
-                        setUser(result.user);
-                        history.push(redirect);
-                      })
-                      .catch((err) => {
-                        setError(err.message);
-                      });
-                  }}
-                  className="btn"
-                >
-                  <img src={google} width="46px" alt="google-icon" />
-                </button>
-              </div>
             </div>
           </div>
         </div>

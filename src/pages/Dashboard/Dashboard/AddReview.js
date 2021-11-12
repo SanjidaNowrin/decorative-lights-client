@@ -1,6 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import useAuth from "./../../../hooks/useAuth";
 const AddReview = () => {
+  const { allContext } = useAuth();
+  const { user } = allContext;
   const {
     register,
     handleSubmit,
@@ -30,13 +33,27 @@ const AddReview = () => {
                 <input
                   {...register("name")}
                   placeholder="name"
-                  className="p-3 m-2 w-100"
+                  defaultValue={user.displayName}
+                  className="p-2 m-2 w-100"
+                />
+                <br />
+                <input
+                  {...register("email")}
+                  defaultValue={user.email}
+                  type="email"
+                  className="p-2 m-2 w-100"
                 />
 
                 <br />
                 <input
                   {...register("description")}
                   placeholder="Description"
+                  className="p-3 m-2 w-100"
+                />
+                <br />
+                <input
+                  {...register("img", { required: true })}
+                  placeholder="Image Link"
                   className="p-3 m-2 w-100"
                 />
                 <br />

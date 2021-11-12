@@ -27,7 +27,7 @@ function AdminRoute(props) {
         ) : (
           <Redirect
             to={{
-              pathname: "/login",
+              pathname: "/dashboard",
               state: { from: location },
             }}
           />

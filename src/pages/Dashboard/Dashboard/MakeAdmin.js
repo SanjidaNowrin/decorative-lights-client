@@ -1,8 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import admin from "../../../assets/images/signup.png";
+import useAuth from "./../../../hooks/useAuth";
 const MakeAdmin = () => {
   const { register, handleSubmit, watch, errors } = useForm();
+  const { loading } = useAuth();
 
   const onSubmit = (data) => {
     fetch("http://localhost:5000/makeAdmin", {
@@ -12,6 +14,7 @@ const MakeAdmin = () => {
     })
       .then((res) => res.json())
       .then((result) => console.log(result));
+    alert("Successfully added!!");
     console.log(data);
   };
 

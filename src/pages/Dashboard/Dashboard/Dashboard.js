@@ -142,6 +142,23 @@ const Dashboard = (props) => {
           >
             Log Out
           </button>
+          <br />
+          <button
+            style={{
+              backgroundColor: "#A07047",
+              marginTop: "15px",
+            }}
+            className="border-0 btn btn-primary fw-bolder"
+          >
+            <NavLink
+              as={NavLink}
+              className="text-white"
+              to="/home"
+              style={{ textDecoration: "none" }}
+            >
+              Home
+            </NavLink>
+          </button>
         </div>
       </List>
     </div>

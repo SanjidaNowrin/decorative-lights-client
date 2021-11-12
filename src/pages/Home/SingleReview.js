@@ -1,7 +1,7 @@
 import React from "react";
 import Rating from "react-rating";
 const SingleReview = ({ singlereview }) => {
-  const { _id, name, description, rating } = singlereview;
+  const { _id, name, description, rating, email, img } = singlereview;
   return (
     <div className="mt-5 col-lg-4 col-sm-6 gx-5">
       <div
@@ -9,16 +9,24 @@ const SingleReview = ({ singlereview }) => {
         style={{ background: "#EFEFEF" }}
       >
         <div className="card-body">
+          <img
+            src={img}
+            className="card-img-top rounded-circle"
+            alt="..."
+            width="200px"
+            height="236px"
+          />
           <h3
             className="mb-3 text-center card-title font-weight-bold"
             style={{ color: "#895E40" }}
           >
             {name}
           </h3>
+          <p className="text-center card-text">{email}</p>
           <p className="text-center card-text">{description}</p>
           <h3
             className="mb-3 text-center card-text"
-            style={{ color: "#895E40" }}
+            style={{ color: "#FF9529" }}
           >
             <Rating
               initialRating={rating}

@@ -97,7 +97,16 @@ const Details = () => {
                 />
 
                 <br />
-                <textarea {...register("address")}></textarea>
+                <input
+                  {...register("phonenumber")}
+                  placeholder="Phone Number"
+                  className="p-2 m-2 w-100"
+                ></input>
+                <br />
+                <textarea
+                  {...register("address")}
+                  placeholder="Address"
+                ></textarea>
                 <br />
 
                 {errors.exampleRequired && <span>This field is required</span>}

@@ -3,7 +3,7 @@ import React from "react";
 const Visit = () => {
   return (
     <div className="container">
-      <div className="m-0 mb-3 row align-items-center gy-5 gx-5">
+      <div className="m-0 mb-5 row align-items-center gy-5 gx-5">
         <div className="col-md-6">
           <h1 className="mb-4 fw-bold fs-1" style={{ color: "#895E40" }}>
             Visit us anytime
