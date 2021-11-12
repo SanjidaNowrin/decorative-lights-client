@@ -8,7 +8,7 @@ function AdminRoute(props) {
 
   const { allContext } = useAuth();
   const { user, loading, isAdmi } = allContext;
-  if (loading) {
+  if (!isAdmi) {
     return (
       <div className="py-5 my-5 text-center">
         <Spinner animation="border" role="status">
@@ -27,7 +27,7 @@ function AdminRoute(props) {
         ) : (
           <Redirect
             to={{
-              pathname: "/dashboard",
+              pathname: "/login",
               state: { from: location },
             }}
           />

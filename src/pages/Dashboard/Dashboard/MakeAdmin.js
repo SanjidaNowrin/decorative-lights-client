@@ -28,7 +28,7 @@ const MakeAdmin = () => {
           <div className="login-form">
             <form onSubmit={handleSubmit(onSubmit)}>
               <input
-                className="input-field"
+                className="input-field w-100"
                 name="email"
                 placeholder="Email"
                 type="email"
