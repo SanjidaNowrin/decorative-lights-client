@@ -12,14 +12,14 @@ const ManageAllOrders = () => {
   const { email } = user;
 
   useEffect(() => {
-    const query = `http://localhost:5000/singlecart?email=${email}`;
+    const query = `https://cryptic-forest-81698.herokuapp.com/singlecart?email=${email}`;
     fetch(query)
       .then((res) => res.json())
       .then((data) => setCarts(data));
   }, [control, email, reload]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allOrders")
+    fetch("https://cryptic-forest-81698.herokuapp.com/allOrders")
       .then((res) => res.json())
       .then((data) => setEvent(data));
   }, [control, reload]);
@@ -27,7 +27,7 @@ const ManageAllOrders = () => {
   const handleDelete = (id) => {
     const confirmation = window.confirm("are you sure to delete");
     if (confirmation) {
-      fetch(`http://localhost:5000/deleteEvent/${id}`, {
+      fetch(`https://cryptic-forest-81698.herokuapp.com/deleteEvent/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -42,7 +42,7 @@ const ManageAllOrders = () => {
   function confirmHandler(id) {
     const confirmation = window.confirm("are you sure to confirm!!");
     if (confirmation) {
-      fetch(`http://localhost:5000/allOrders/${id}`, {
+      fetch(`https://cryptic-forest-81698.herokuapp.com/allOrders/${id}`, {
         method: "put",
       })
         .then((res) => res.json())

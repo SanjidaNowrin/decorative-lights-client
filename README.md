@@ -1,8 +1,8 @@
 # ALAMP
 
-## Live Website Link [Click Here]()
+## Live Website Link [Click Here](https://decorative-lights-fcf0a.web.app)
 
-## Server site Link [Click Here]()
+## Server site Link [Click Here](https://cryptic-forest-81698.herokuapp.com/)
 
 ## Description
 

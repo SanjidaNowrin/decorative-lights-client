@@ -11,7 +11,7 @@ const Cart = () => {
   const { email } = user;
 
   useEffect(() => {
-    const query = `http://localhost:5000/singlecart?email=${email}`;
+    const query = `https://cryptic-forest-81698.herokuapp.com/singlecart?email=${email}`;
     fetch(query)
       .then((res) => res.json())
       .then((data) => setCarts(data));
@@ -21,7 +21,7 @@ const Cart = () => {
   const handleDelete = (id) => {
     const confirmation = window.confirm("are you sure to delete?");
     if (confirmation) {
-      fetch(`http://localhost:5000/delete/${id}`, {
+      fetch(`https://cryptic-forest-81698.herokuapp.com/delete/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

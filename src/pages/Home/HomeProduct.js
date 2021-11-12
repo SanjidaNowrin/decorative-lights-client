@@ -5,7 +5,7 @@ import MoreProduct from "./../MoreProducts/MoreProduct";
 const HomeProduct = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://cryptic-forest-81698.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

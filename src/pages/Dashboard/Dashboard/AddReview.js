@@ -11,7 +11,7 @@ const AddReview = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/addreview", {
+    fetch("https://cryptic-forest-81698.herokuapp.com/addreview", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

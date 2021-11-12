@@ -8,13 +8,13 @@ const ManageProducts = () => {
   const [control, setConrol] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allProducts")
+    fetch("https://cryptic-forest-81698.herokuapp.com/allProducts")
       .then((res) => res.json())
       .then((data) => setEvent(data));
   }, [control]);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/deleteProducts/${id}`, {
+    fetch(`https://cryptic-forest-81698.herokuapp.com/deleteProducts/${id}`, {
       method: "DELETE",
       headers: { "content-type": "application/json" },
     })

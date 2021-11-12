@@ -11,7 +11,7 @@ const Details = () => {
   const { allContext } = useAuth();
   const { user } = allContext;
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${id}`)
+    fetch(`https://cryptic-forest-81698.herokuapp.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => setDetails(data));
   }, []);
@@ -31,7 +31,7 @@ const Details = () => {
     newData.img = img;
 
     //console.log(newData);
-    fetch("http://localhost:5000/product/add", {
+    fetch("https://cryptic-forest-81698.herokuapp.com/product/add", {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(newData),
