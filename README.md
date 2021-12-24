@@ -21,3 +21,5 @@
 ### . When admin add any new product users will be able to see in more products section.
 
 ### . Admin can able to delete any orders if products are not available right now.
+
+### . If you want to see admin dashboard feature you need to login using admin@admin.com
