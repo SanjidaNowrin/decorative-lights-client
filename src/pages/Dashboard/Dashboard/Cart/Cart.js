@@ -75,21 +75,19 @@ const Cart = () => {
               <td>{cart.title}</td>
               <td>{cart.price}</td>
               <td>{cart.name}</td>
-              <td>
-                <button
-                  className="text-white btn"
-                  style={{ backgroundColor: "#895E40" }}
-                >
-                  {cart.status}
-                </button>
+              <td
+                className="text-white btn p-2 mt-2 fw-bold"
+                style={{ backgroundColor: "#895E40" }}
+              >
+                {cart.status}
               </td>
               <td>
                 <button
                   onClick={() => handleDelete(cart._id)}
-                  className="text-white btn"
+                  className="text-white btn p-2"
                   style={{ backgroundColor: "#895E40" }}
                 >
-                  Delete
+                  <i className="fas fa-trash-alt "></i>
                 </button>
               </td>
               <td>
@@ -101,7 +99,7 @@ const Cart = () => {
                       className="text-white btn"
                       style={{ backgroundColor: "#895E40" }}
                     >
-                      Pay
+                      <i class="fab fa-stripe fa-2x"></i>
                     </button>
                   </Link>
                 )}

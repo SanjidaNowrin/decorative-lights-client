@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Table } from "react-bootstrap";
 import useAuth from "./../../../../hooks/useAuth";
+import axios from "axios";
 const ManageAllOrders = () => {
   const [event, setEvent] = useState([]);
   const [reload, setReload] = useState(true);
@@ -53,6 +54,7 @@ const ManageAllOrders = () => {
         });
     }
   }
+
   return (
     <div className="container">
       <h1 className="mt-4 mb-5 text-center" style={{ color: "#895E40" }}>
@@ -71,7 +73,8 @@ const ManageAllOrders = () => {
             <th>Name</th>
             <th>Email</th>
             <th>Address</th>
-            <th>Status</th>
+            <th>Current Status</th>
+            <th>Update Status</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -84,20 +87,24 @@ const ManageAllOrders = () => {
               <td>{pd.email}</td>
               <td>{pd.address}</td>
               <td>{pd.status}</td>
-              <button
-                onClick={() => handleDelete(pd._id)}
-                className="p-2 mt-2 text-white ms-2 btn me-2"
-                style={{ backgroundColor: "#895E40" }}
-              >
-                Delete
-              </button>
-              <button
-                onClick={() => confirmHandler(pd._id)}
-                className="p-2 mt-2 mb-2 text-white ms-2 btn me-2"
-                style={{ backgroundColor: "#895E40" }}
-              >
-                Pending
-              </button>
+              <td>
+                <button
+                  onClick={() => confirmHandler(pd._id)}
+                  className="p-2 mt-2 mb-2 text-white ms-2 btn me-2"
+                  style={{ backgroundColor: "#895E40" }}
+                >
+                  Pending
+                </button>
+              </td>
+              <td>
+                <button
+                  onClick={() => handleDelete(pd._id)}
+                  className="p-2 mt-2 text-white ms-2 btn me-2"
+                  style={{ backgroundColor: "#895E40" }}
+                >
+                  Delete
+                </button>
+              </td>
             </tr>
           </tbody>
         ))}

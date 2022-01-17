@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Spinner } from "react-bootstrap";
 import MoreProduct from "./../MoreProducts/MoreProduct";
+import "./HomeProduct.css";
 
 const HomeProduct = () => {
   const [products, setProducts] = useState([]);
@@ -10,10 +11,8 @@ const HomeProduct = () => {
       .then((data) => setProducts(data));
   }, []);
   return (
-    <div className="container mt-4">
-      <h1 style={{ color: "#895E40" }} className="container text-center">
-        Our Products
-      </h1>
+    <div className="container mt-5">
+      <h1 className="container text-center productTitle">Our Products</h1>
       {products.length === 0 ? (
         <div className="py-5 my-5 text-center">
           <Spinner animation="border" role="status">

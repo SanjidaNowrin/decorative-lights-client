@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./HeadingBanner.css";
 const HeadingBanner = () => {
   return (
@@ -13,13 +14,16 @@ const HeadingBanner = () => {
                 ― Martin Luther King Jr., A Testament of Hope: The Essential
                 Writings and Speeches
               </small>
-            </h3>{" "}
-            <button
-              className="btn btn m-3"
-              style={{ backgroundColor: "#A07047", color: "white" }}
-            >
-              View More
-            </button>
+            </h3>
+            <Link to="/moreproducts">
+              <button
+                className="btn btn m-3"
+                style={{ backgroundColor: "#A07047", color: "white" }}
+              >
+                <i className="fas fa-angle-double-right me-1"></i>
+                View More
+              </button>
+            </Link>
           </div>
         </div>
       </div>

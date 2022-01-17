@@ -6,7 +6,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import List from "@mui/material/List";
 import { NavLink } from "react-router-dom";
 import ListItem from "@mui/material/ListItem";
@@ -134,18 +133,17 @@ const Dashboard = (props) => {
           <button
             style={{
               backgroundColor: "#A07047",
-              marginTop: "15px",
+              marginTop: "20px",
             }}
             className="border-0 btn btn-primary fw-bolder"
           >
-            <NavLink
-              as={NavLink}
-              className="text-white"
+            <Link
+              className="text-white p-2"
               to="/home"
               style={{ textDecoration: "none" }}
             >
               Home
-            </NavLink>
+            </Link>
           </button>
         </div>
       </List>

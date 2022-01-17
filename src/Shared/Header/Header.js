@@ -74,6 +74,8 @@ const Header = () => {
                     style={{ backgroundColor: "#513C27" }}
                     className="border-0 btn btn-primary fw-bolder"
                   >
+                    {" "}
+                    <i className="fas fa-sign-out-alt me-1"></i>
                     Log Out
                   </button>
                 </div>
