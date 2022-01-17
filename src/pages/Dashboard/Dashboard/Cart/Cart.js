@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import useAuth from "./../../../../hooks/useAuth";
 
 const Cart = () => {
@@ -61,6 +62,8 @@ const Cart = () => {
                   <h5> {cart.email}</h5>
                   <h5 className="m-0"> {cart.address}</h5>
                   <h5 className="m-0"> {cart.booking_id}</h5>
+                  <h5 className="m-0"> {cart.price}</h5>
+
                   <button
                     className="p-2 mt-4 mb-3 text-white ms-2 btn me-2"
                     style={{ backgroundColor: "#895E40" }}
@@ -74,6 +77,21 @@ const Cart = () => {
                   >
                     Delete
                   </button>
+
+                  <p className="m-0">
+                    {cart.payment ? (
+                      "Paid"
+                    ) : (
+                      <Link to={`/dashboard/payment/${cart._id}`}>
+                        <button
+                          className="p-2 mt-4 mb-3 text-white ms-2 btn me-2"
+                          style={{ backgroundColor: "#895E40" }}
+                        >
+                          Pay
+                        </button>
+                      </Link>
+                    )}
+                  </p>
                 </Col>
               </Row>
             ))}

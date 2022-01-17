@@ -50,18 +50,6 @@ const Dashboard = (props) => {
       <List>
         {!isAdmi && (
           <NavLink
-            to={`${url}/payment`}
-            style={{
-              textDecoration: "none",
-              fontSize: "20px",
-              color: "black",
-            }}
-          >
-            <li className="mt-3 ps-3 dashboard-menu"> Payment</li>
-          </NavLink>
-        )}
-        {!isAdmi && (
-          <NavLink
             to={`${url}/cart`}
             style={{
               textDecoration: "none",
@@ -249,7 +237,7 @@ const Dashboard = (props) => {
           <Route exact path={`${path}/review`}>
             <AddReview></AddReview>
           </Route>
-          <Route exact path={`${path}/payment`}>
+          <Route exact path={`${path}/payment/:productId`}>
             <Payment></Payment>
           </Route>
           <AdminRoute exact path={`${path}/manageorders`}>

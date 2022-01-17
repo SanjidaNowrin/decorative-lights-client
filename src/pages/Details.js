@@ -7,7 +7,7 @@ import Header from "../Shared/Header/Header";
 const Details = () => {
   const { id } = useParams();
   const [details, setDetails] = useState({});
-  const { img, desc, title } = details;
+  const { img, desc, title, price } = details;
   const { allContext } = useAuth();
   const { user } = allContext;
   useEffect(() => {
@@ -29,6 +29,7 @@ const Details = () => {
     newData.title = title;
     newData.desc = desc;
     newData.img = img;
+    newData.price = price;
 
     //console.log(newData);
     fetch("https://cryptic-forest-81698.herokuapp.com/product/add", {
@@ -73,6 +74,12 @@ const Details = () => {
                   {...register("desc")}
                   placeholder="desc"
                   defaultValue={desc}
+                  className="p-2 m-2 w-100 h-100"
+                />
+                <input
+                  {...register("price")}
+                  placeholder="price"
+                  defaultValue={price}
                   className="p-2 m-2 w-100 h-100"
                 />
 

@@ -1,0 +1,40 @@
+.reviews {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.reviewTitle {
+  position: relative;
+  margin-bottom: 5rem;
+  color: #895e40;
+  font-weight: 600;
+  font-size: 2.7rem;
+}
+
+.reviewTitle:after {
+  content: "";
+  position: absolute;
+  background-color: rgb(80, 80, 82);
+  width: 10%;
+  height: 3px;
+  bottom: -10px;
+  left: 45%;
+}
+
+.reviewCart {
+  /* border: 1px solid red; */
+  padding: 15px;
+}
+
+.reviewCart h6 {
+  margin: 15px 0px;
+}
+
+.reviewCart p {
+  color: #666;
+}
