@@ -50,46 +50,51 @@ const Review = () => {
       });
   }, []);
   return (
-    <div className="reviews container" id="reviews">
+    <div>
       <h2 className="reviewTitle"> Reviews </h2>
-      {loading ? (
-        <>
-          <Slider {...settings}>
-            {reviews.map((review) => (
-              <div key={review._id}>
-                <div className="reviewCart">
-                  <img
-                    style={{
-                      width: "6rem",
-                      height: "6rem",
-                      borderRadius: "50%",
-                      margin: "auto",
-                    }}
-                    src={review?.img}
-                    alt=""
-                  />
-                  <h5 style={{ marginTop: "10px" }}>{review?.name}</h5>
-                  <Rating
-                    style={{ color: "#FF9529" }}
-                    initialRating={review?.rating}
-                    emptySymbol="far fa-star"
-                    fullSymbol="fas fa-star"
-                    readonly
-                  ></Rating>{" "}
-                  <br />
-                  <p style={{ marginTop: "12px" }}>
-                    <q>{review?.description}</q>
-                  </p>
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </>
-      ) : (
-        <div className="spinner">
-          <Spinner animation="border" variant="dark" />
+      <div className="review-bg">
+        <div className="reviews container" id="reviews">
+          {loading ? (
+            <>
+              <Slider {...settings}>
+                {reviews.map((review) => (
+                  <div key={review._id}>
+                    <div className="reviewCart">
+                      <img
+                        style={{
+                          width: "6rem",
+                          height: "6rem",
+                          borderRadius: "50%",
+                          margin: "auto",
+                          marginTop: "15px",
+                        }}
+                        src={review?.img}
+                        alt=""
+                      />
+                      <h5 style={{ marginTop: "10px" }}>{review?.name}</h5>
+                      <Rating
+                        style={{ color: "#FF9529" }}
+                        initialRating={review?.rating}
+                        emptySymbol="far fa-star"
+                        fullSymbol="fas fa-star"
+                        readonly
+                      ></Rating>{" "}
+                      <br />
+                      <p style={{ marginTop: "12px" }}>
+                        <q>{review?.description}</q>
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </Slider>
+            </>
+          ) : (
+            <div className="spinner">
+              <Spinner animation="border" variant="dark" />
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </div>
   );
 };

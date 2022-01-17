@@ -6,14 +6,19 @@
   /* align-items: center; */
   justify-content: center;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
-
+.review-bg {
+  background-color: #efefef;
+}
 .reviewTitle {
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
   color: #895e40;
   font-weight: 600;
   font-size: 2.7rem;
+  text-align: center;
 }
 
 .reviewTitle:after {
@@ -37,4 +42,11 @@
 
 .reviewCart p {
   color: #666;
+}
+
+.slick-next:before {
+  color: #895e40;
+}
+.slick-prev:before {
+  color: #895e40;
 }
