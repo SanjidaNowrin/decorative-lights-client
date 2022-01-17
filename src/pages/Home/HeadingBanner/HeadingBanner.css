@@ -1,0 +1,10 @@
+.parent {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://i.ibb.co/LJDJMRh/photo-1605970825648-d4c641e83a26.jpg");
+  background-attachment: fixed;
+  height: 80vh;
+
+  /* height: 200px; */
+}
