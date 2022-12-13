@@ -13,14 +13,14 @@ const ManageAllOrders = () => {
   const { email } = user;
 
   useEffect(() => {
-    const query = `https://cryptic-forest-81698.herokuapp.com/singlecart?email=${email}`;
+    const query = `https://decorative-lights-ecommerce.onrender.com/singlecart?email=${email}`;
     fetch(query)
       .then((res) => res.json())
       .then((data) => setCarts(data));
   }, [control, email, reload]);
 
   useEffect(() => {
-    fetch("https://cryptic-forest-81698.herokuapp.com/allOrders")
+    fetch("https://decorative-lights-ecommerce.onrender.com/allOrders")
       .then((res) => res.json())
       .then((data) => setEvent(data));
   }, [control, reload]);
@@ -28,9 +28,12 @@ const ManageAllOrders = () => {
   const handleDelete = (id) => {
     const confirmation = window.confirm("are you sure to delete");
     if (confirmation) {
-      fetch(`https://cryptic-forest-81698.herokuapp.com/deleteEvent/${id}`, {
-        method: "DELETE",
-      })
+      fetch(
+        `https://decorative-lights-ecommerce.onrender.com/deleteEvent/${id}`,
+        {
+          method: "DELETE",
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
@@ -43,9 +46,12 @@ const ManageAllOrders = () => {
   function confirmHandler(id) {
     const confirmation = window.confirm("are you sure to confirm!!");
     if (confirmation) {
-      fetch(`https://cryptic-forest-81698.herokuapp.com/allOrders/${id}`, {
-        method: "put",
-      })
+      fetch(
+        `https://decorative-lights-ecommerce.onrender.com/allOrders/${id}`,
+        {
+          method: "put",
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.modifiedCount === 1) {

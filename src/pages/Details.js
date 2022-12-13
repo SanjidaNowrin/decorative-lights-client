@@ -11,7 +11,7 @@ const Details = () => {
   const { allContext } = useAuth();
   const { user } = allContext;
   useEffect(() => {
-    fetch(`https://cryptic-forest-81698.herokuapp.com/products/${id}`)
+    fetch(`https://decorative-lights-ecommerce.onrender.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => setDetails(data));
   }, []);
@@ -32,7 +32,7 @@ const Details = () => {
     newData.price = price;
 
     //console.log(newData);
-    fetch("https://cryptic-forest-81698.herokuapp.com/product/add", {
+    fetch("https://decorative-lights-ecommerce.onrender.com/product/add", {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(newData),

@@ -7,7 +7,7 @@ const MakeAdmin = () => {
   const { loading } = useAuth();
 
   const onSubmit = (data) => {
-    fetch("https://cryptic-forest-81698.herokuapp.com/makeAdmin", {
+    fetch("https://decorative-lights-ecommerce.onrender.com/makeAdmin", {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

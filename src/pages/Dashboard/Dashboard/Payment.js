@@ -12,7 +12,9 @@ const Payment = () => {
   const { productId } = useParams();
   const [payment, setPayment] = useState({});
   useEffect(() => {
-    fetch(`https://cryptic-forest-81698.herokuapp.com/payments/${productId}`)
+    fetch(
+      `https://decorative-lights-ecommerce.onrender.com/payments/${productId}`
+    )
       .then((res) => res.json())
       .then((data) => setPayment(data));
   }, [productId]);

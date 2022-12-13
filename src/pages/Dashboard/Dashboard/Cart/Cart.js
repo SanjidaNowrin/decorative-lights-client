@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "./../../../../hooks/useAuth";
 
@@ -12,17 +11,17 @@ const Cart = () => {
   const { email } = user;
 
   useEffect(() => {
-    const query = `https://cryptic-forest-81698.herokuapp.com/singlecart?email=${email}`;
+    const query = `https://decorative-lights-ecommerce.onrender.com/singlecart?email=${email}`;
     fetch(query)
       .then((res) => res.json())
       .then((data) => setCarts(data));
   }, [email, reload]);
-  console.log(carts);
+  // console.log(carts);
   //delete
   const handleDelete = (id) => {
     const confirmation = window.confirm("are you sure to delete?");
     if (confirmation) {
-      fetch(`https://cryptic-forest-81698.herokuapp.com/delete/${id}`, {
+      fetch(`https://decorative-lights-ecommerce.onrender.com/delete/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -34,7 +33,7 @@ const Cart = () => {
           }
         });
     }
-    console.log(id);
+    // console.log(id);
   };
   return (
     <div

@@ -26,7 +26,7 @@ const MoreProduct = ({ moreproduct }) => {
           </h3>
 
           <Link to={`/details/${_id}`}>
-            <button className="container details-btn">Buy Now</button>
+            <button className="container details-btn">Read More</button>
           </Link>
         </div>
       </div>

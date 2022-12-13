@@ -147,9 +147,7 @@ const useFirebase = () => {
   }
   //admin
   useEffect(() => {
-    fetch(
-      `https://cryptic-forest-81698.herokuapp.com/checkAdmin/${user?.email}`
-    )
+    fetch(`https://decorative-lights-ecommerce.onrender.com/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         if (data[0]?.role === "admin") {
@@ -161,7 +159,7 @@ const useFirebase = () => {
   }, [user?.email]);
 
   const hanldeUserInfoRegister = (email) => {
-    fetch("https://cryptic-forest-81698.herokuapp.com/addUserInfo", {
+    fetch("https://decorative-lights-ecommerce.onrender.com/addUserInfo", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email }),

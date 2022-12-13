@@ -12,7 +12,7 @@ const AddProduct = () => {
 
   const onSubmit = (data) => {
     data.email = user?.email;
-    fetch("https://cryptic-forest-81698.herokuapp.com/addproduct", {
+    fetch("https://decorative-lights-ecommerce.onrender.com/addproduct", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

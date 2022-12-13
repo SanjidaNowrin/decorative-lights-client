@@ -2,7 +2,7 @@
 
 ## Live Website Link [Click Here](https://decorative-lights-fcf0a.web.app)
 
-## Server site Link [Click Here](https://cryptic-forest-81698.herokuapp.com/)
+## Server site Link [Click Here](https://decorative-lights-ecommerce.onrender.com/)
 
 ## Description
 
@@ -26,4 +26,4 @@
 
 ### . Admin can able to delete any orders if products are not available right now.
 
-### . If you want to see admin dashboard feature you need to login using admin@admin.com
+### . If you want to see admin dashboard feature you need to login using admin@admin.com and password 123456.

@@ -8,16 +8,19 @@ const ManageProducts = () => {
   const [control, setConrol] = useState(false);
 
   useEffect(() => {
-    fetch("https://cryptic-forest-81698.herokuapp.com/allProducts")
+    fetch("https://decorative-lights-ecommerce.onrender.com/allProducts")
       .then((res) => res.json())
       .then((data) => setEvent(data));
   }, [control]);
 
   const handleDelete = (id) => {
-    fetch(`https://cryptic-forest-81698.herokuapp.com/deleteProducts/${id}`, {
-      method: "DELETE",
-      headers: { "content-type": "application/json" },
-    })
+    fetch(
+      `https://decorative-lights-ecommerce.onrender.com/deleteProducts/${id}`,
+      {
+        method: "DELETE",
+        headers: { "content-type": "application/json" },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount) {

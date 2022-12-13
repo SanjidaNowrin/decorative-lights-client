@@ -6,7 +6,7 @@ import "./HomeProduct.css";
 const HomeProduct = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://cryptic-forest-81698.herokuapp.com/products")
+    fetch("https://decorative-lights-ecommerce.onrender.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
