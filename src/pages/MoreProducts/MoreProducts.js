@@ -7,7 +7,7 @@ import MoreProduct from "./MoreProduct";
 const MoreProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://decorative-lights-server.vercel.app/products")
+    fetch("https://decorative-lights-ecommerce.onrender.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

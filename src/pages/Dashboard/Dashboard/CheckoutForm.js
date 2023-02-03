@@ -37,7 +37,7 @@ const CheckoutForm = ({ payment }) => {
       try {
         const { id } = paymentMethod;
         const response = await axios.post(
-          "https://decorative-lights-server.vercel.app/payment",
+          "https://decorative-lights-ecommerce.onrender.com/payment",
           {
             amount: 1000,
             id,
