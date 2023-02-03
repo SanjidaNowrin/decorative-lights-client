@@ -11,7 +11,7 @@ const Cart = () => {
   const { email } = user;
 
   useEffect(() => {
-    const query = `https://decorative-lights-ecommerce.onrender.com/singlecart?email=${email}`;
+    const query = `https://decorative-lights-server.vercel.app/singlecart?email=${email}`;
     fetch(query)
       .then((res) => res.json())
       .then((data) => setCarts(data));
@@ -21,7 +21,7 @@ const Cart = () => {
   const handleDelete = (id) => {
     const confirmation = window.confirm("are you sure to delete?");
     if (confirmation) {
-      fetch(`https://decorative-lights-ecommerce.onrender.com/delete/${id}`, {
+      fetch(`https://decorative-lights-server.vercel.app/delete/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

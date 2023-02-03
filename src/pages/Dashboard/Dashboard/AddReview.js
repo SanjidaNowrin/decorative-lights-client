@@ -11,7 +11,7 @@ const AddReview = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("https://decorative-lights-ecommerce.onrender.com/addreview", {
+    fetch("https://decorative-lights-server.vercel.app/addreview", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

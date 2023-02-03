@@ -42,7 +42,7 @@ const Review = () => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-    fetch("https://decorative-lights-ecommerce.onrender.com/reviews")
+    fetch("https://decorative-lights-server.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);

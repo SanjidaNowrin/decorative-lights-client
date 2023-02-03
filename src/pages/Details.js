@@ -11,7 +11,7 @@ const Details = () => {
   const { allContext } = useAuth();
   const { user } = allContext;
   useEffect(() => {
-    fetch(`https://decorative-lights-ecommerce.onrender.com/products/${id}`)
+    fetch(`https://decorative-lights-server.vercel.app/products/${id}`)
       .then((res) => res.json())
       .then((data) => setDetails(data));
   }, []);
@@ -32,7 +32,7 @@ const Details = () => {
     newData.price = price;
 
     //console.log(newData);
-    fetch("https://decorative-lights-ecommerce.onrender.com/product/add", {
+    fetch("https://decorative-lights-server.vercel.app/product/add", {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(newData),

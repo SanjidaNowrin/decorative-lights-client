@@ -8,19 +8,16 @@ const ManageProducts = () => {
   const [control, setConrol] = useState(false);
 
   useEffect(() => {
-    fetch("https://decorative-lights-ecommerce.onrender.com/allProducts")
+    fetch("https://decorative-lights-server.vercel.app/allProducts")
       .then((res) => res.json())
       .then((data) => setEvent(data));
   }, [control]);
 
   const handleDelete = (id) => {
-    fetch(
-      `https://decorative-lights-ecommerce.onrender.com/deleteProducts/${id}`,
-      {
-        method: "DELETE",
-        headers: { "content-type": "application/json" },
-      }
-    )
+    fetch(`https://decorative-lights-server.vercel.app/deleteProducts/${id}`, {
+      method: "DELETE",
+      headers: { "content-type": "application/json" },
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount) {

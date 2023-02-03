@@ -2,7 +2,7 @@
 
 ## Live Website Link [Click Here](https://decorative-lights-fcf0a.web.app)
 
-## Server site Link [Click Here](https://decorative-lights-ecommerce.onrender.com/)
+## Server site Link [Click Here](https://decorative-lights-server.vercel.app/)
 
 ## Description
 

@@ -148,7 +148,7 @@ const useFirebase = () => {
   //admin
   useEffect(() => {
     fetch(
-      `https://decorative-lights-ecommerce.onrender.com/checkAdmin/${user?.email}`
+      `https://decorative-lights-server.vercel.app/checkAdmin/${user?.email}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -161,7 +161,7 @@ const useFirebase = () => {
   }, [user?.email]);
 
   const hanldeUserInfoRegister = (email) => {
-    fetch("https://decorative-lights-ecommerce.onrender.com/addUserInfo", {
+    fetch("https://decorative-lights-server.vercel.app/addUserInfo", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email }),
